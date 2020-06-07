@@ -17,9 +17,10 @@ resource "azurerm_resource_group" "contoso_rg" {
     location = var.region
     tags = local.tags
 }
-
+# main.tf
 resource "azurerm_resource_group" "contoso_dev_rg" {    
     name = "contoso_dev_rg"
     location = var.region
     tags = local.tags
 }
+
