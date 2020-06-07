@@ -1,2 +1,3 @@
-# terraform.tfvars
-region = "North Europe"
+tags = {  
+    cost_center = "contoso research"    
+}  

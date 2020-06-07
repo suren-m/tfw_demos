@@ -1,2 +1,1 @@
-# terraform.tfvars
-region = "UK West"
+region = "UK South"
