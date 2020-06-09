@@ -1,3 +1,7 @@
-output "rg_id" {    
-    value = module.contoso_dev_rg.rg_id
+output "resource_groups" {    
+    value = module.connectedrg.rg_ids
+}
+
+output "vnets" {    
+    value = module.connectedrg.vnet_ids
 }
