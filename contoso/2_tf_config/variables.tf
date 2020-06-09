@@ -2,7 +2,7 @@ variable prefix {}
 
 variable region {           
     type = string
-    default = "UK South"
+    default = "North Europe"
 }
 
 variable tags {
