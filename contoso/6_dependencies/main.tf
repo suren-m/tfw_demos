@@ -11,18 +11,12 @@ resource "azurerm_resource_group" "rgs" {
     tags = var.tags
 }
 
-# Create a virtual network
 resource "azurerm_virtual_network" "vnet" {
-    name                = "myTFVnet"
-    address_space       = ["10.0.0.0/16"]
-    location            = "westus2"
-    resource_group_name = azurerm_resource_group.rg.name
+    count               = length(var.rg_names)
+    name                = lookup(var.vnets[count.index], "name")
+    address_space       = [lookup(var.vnets[count.index], "address")]
+    location            = var.region
+    resource_group_name = azurerm_resource_group.rgs[count.index].name
 }
 
 
-# usage: random_integer.suffix.result
-
-# resource "random_integer" "suffix" {
-#   min     = 1
-#   max     = 50000 
-# }
