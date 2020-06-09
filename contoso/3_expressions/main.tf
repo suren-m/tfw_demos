@@ -6,7 +6,7 @@ provider "azurerm" {
 
 resource "azurerm_resource_group" "rgs" {  
     count = length(var.rg_names)
-    name = "${var.prefix}_${var.rg_names[count.index]}_rg"
+    name = "${var.prefix}_${var.rg_names[count.index]}"
     location = var.region
     tags = var.tags
 }

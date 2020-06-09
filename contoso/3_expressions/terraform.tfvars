@@ -1,9 +1,9 @@
 # terraform.tfvars
 rg_names = [
-    "contoso_rg", 
-    "contoso_dev_rg", 
-    "contoso_staging_rg"
+    "research_dev_rg",
+    "research_staging_rg",
+    "research_prod_rg"
 ]
 tags = {  
-    cost_center = "contoso research"    
+    cost_center = "contoso2 research"    
 }  
