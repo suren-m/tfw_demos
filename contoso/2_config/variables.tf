@@ -1,8 +1,9 @@
+# variables.tf
 variable prefix {}
 
 variable region {           
     type = string
-    default = "North Europe"
+    default = "UK South"
 }
 
 variable tags {

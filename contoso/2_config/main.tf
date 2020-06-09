@@ -16,7 +16,6 @@ provider "azurerm" {
 
 resource "azurerm_resource_group" "contoso_rg" {
     name = "${var.prefix}_rg"
-    # name = "Hello, %{ if var.name != "" }${var.name}%{ else }unnamed%{ endif }!"    
     location = var.region
     tags = var.tags
 }
