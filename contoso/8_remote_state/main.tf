@@ -1,5 +1,4 @@
 # core_workflow
-
 provider "azurerm" {
     version = "~>2.13.0"
     features {}    
@@ -8,15 +7,6 @@ provider "azurerm" {
 
 resource "azurerm_resource_group" "contoso_rg" {
     name = "contoso_rg"
-    location = "UK South"
-
-    tags = {
-        "cost_center" = "contoso research"
-    } 
-}
-
-resource "azurerm_resource_group" "contoso_rg_dev" {
-    name = "contoso_rg_dev"
     location = "UK South"
 
     tags = {
