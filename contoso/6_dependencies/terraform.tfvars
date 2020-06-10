@@ -21,5 +21,5 @@ vnets = [
 ]
 
 tags = {  
-    cost_center = "contoso2 research"    
+    cost_center = "contoso research"    
 }  
