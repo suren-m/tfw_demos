@@ -14,4 +14,5 @@ variable region {
 }
 
 variable tags {
-    t
+    type = map
+}
