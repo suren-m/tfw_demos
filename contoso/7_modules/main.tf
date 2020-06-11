@@ -1,6 +1,6 @@
 # main.tf from calling module 
 provider "azurerm" {
-    version = "~>2.0.0"
+    version = "~>2.13.0"
     features {}    
 }
 
