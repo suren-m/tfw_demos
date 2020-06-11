@@ -1,7 +1,7 @@
 variable rg_names {
-    type = list(string)    
+  type = list(string)
 }
 
 variable vnets {
-    type = list(map(string))    
+  type = list(map(string))
 }
