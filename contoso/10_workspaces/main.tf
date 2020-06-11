@@ -9,9 +9,3 @@ resource "azurerm_resource_group" "contoso_rg" {
     tags = var.tags
 }
 
-# resource "azurerm_resource_group" "rgs" {  
-#     count = length(var.envs)
-#     name = "${var.prefix}_${var.rg_names[count.index]}"
-#     location = var.region
-#     tags = var.tags
-# }
