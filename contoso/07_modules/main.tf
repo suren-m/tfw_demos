@@ -1,8 +1,17 @@
 # main.tf from calling module 
+terraform {
+  required_providers {
+    azurerm = {
+      source  = "hashicorp/azurerm"
+      version = "=2.46.0"
+    }
+  }
+}
+
 provider "azurerm" {
-  version = "~>2.13.0"
   features {}
 }
+
 
 module "connectedrg" {
   # or remote git repo with ?ref=verion    

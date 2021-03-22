@@ -1,14 +1,22 @@
 # main.tf
-provider "azurerm" {
-    version = "~>2.13.0"
-    features {}    
+terraform {
+  required_providers {
+    azurerm = {
+      source  = "hashicorp/azurerm"
+      version = "=2.46.0"
+    }
+  }
 }
 
-resource "azurerm_resource_group" "rgs" {  
-    count = length(var.rg_names)
-    name = "${var.prefix}_${var.rg_names[count.index]}"
-    location = var.region
-    tags = var.tags
+provider "azurerm" {
+  features {}
+}
+
+resource "azurerm_resource_group" "rgs" {
+  count    = length(var.rg_names)
+  name     = "${var.prefix}_${var.rg_names[count.index]}"
+  location = var.region
+  tags     = var.tags
 }
 
 
